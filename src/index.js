@@ -1,8 +1,18 @@
 import ReactDom from 'react-dom';
 
+import './index.css'
+
 function Booklist(){
   return (
-    <section>
+    <section className='booklist'>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
       <Book/>
     </section>
   )
@@ -10,7 +20,7 @@ function Booklist(){
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image/>
       <Title/>
       <Author/>
@@ -19,15 +29,15 @@ const Book = () => {
 }
 
 const Image = () => {
-  return <img src="https://images-eu.ssl-images-amazon.com/images/I/612BYerla-L._AC_UL600_SR600,400_.jpg" alt="" />
+  return <img className='cover' src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1647789287i/60177373.jpg" alt=""/>
 }
 
 const Title = () => {
-  return <h2>Fairy Tale: Stephen King</h2>
+  return <h2 className='title'>Fairy Tale: Stephen King</h2>
 }
 
 const Author = () => {
-  return <h4>Stephen King</h4>
+  return <h4 className='author'>Stephen King</h4>
 }
 
 ReactDom.render(<Booklist/>, document.getElementById('root'));
