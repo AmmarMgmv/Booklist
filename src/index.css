@@ -42,9 +42,7 @@ body {
   margin-right: auto;
 }
 
-.title,
-.author,
-.book p {
+.title, .author, .description {
   text-align: center;
   margin-top: 1rem;
 }
