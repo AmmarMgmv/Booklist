@@ -4,6 +4,7 @@ import './index.css'
 
 const books = [
   {
+    id:1,
     img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1647789287i/60177373.jpg',
     title: 'Fairy Tale',
     author: 'Stephen King',
@@ -11,6 +12,7 @@ const books = [
   },
   
   {
+    id:2,
     img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1373903563i/11566.jpg',
     title: 'The Green Mile',
     author: 'Stephen King',
@@ -18,6 +20,7 @@ const books = [
   },
 
   {
+    id:3,
     img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1213131305i/149267.jpg',
     title: 'The Stand',
     author: 'Stephen King',
@@ -29,14 +32,14 @@ function Booklist(){
   return (
     <section className='booklist'>
       {books.map((book) => {
-        return <Book book={book}></Book>;
+        return <Book key={book.id} {...book}></Book>;
       })}
     </section>
   )
 }
 
 const Book = (props) => {
-  const {img, title, author, desc} = props.book
+  const {img, title, author, desc} = props
   return (
     <article className='book'>
       <img className='cover' src={img} alt="" />
